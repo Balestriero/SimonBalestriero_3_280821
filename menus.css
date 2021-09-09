@@ -237,7 +237,7 @@ a {
   margin-right: 80px;
 }
 .assiette::after {
-  content: url(./maquettes/images/logo/check-solid.svg);
+  content: url(./Maquettes/images/logo/check-solid.svg);
   height: 25px;
   width: 25px;
   border-radius: 50%;
