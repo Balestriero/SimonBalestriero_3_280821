@@ -514,8 +514,9 @@ footer .footer {
   color: white;
 }
 
-footer .footer p {
+footer .footer a {
   font-size: 18px;
+  color: white;
 }
 
 footer img {
