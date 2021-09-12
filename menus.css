@@ -100,10 +100,7 @@ header {
   justify-items: center;
   padding: 15px 0;
 }
-a {
-  /* display: block;
-  grid-column: 1/2; */
-}
+
 .fa-arrow-left {
   grid-column: 1/2;
   color: black;
@@ -183,7 +180,19 @@ a {
   box-shadow: 0px 4px 8px 0px gainsboro;
   overflow: hidden;
   position: relative;
+  animation: apparition 0.8s ease-out;
 }
+@keyframes apparition {
+  from {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
 .nomPlat {
   margin-left: 5px;
 }
@@ -238,7 +247,7 @@ a {
   margin-right: 80px;
 }
 .assiette::after {
-  content: url(./Maquettes/images/logo/check-solid.svg);
+  content: url(./Maquettes/images/logo/check-solid3.png);
   height: 25px;
   width: 25px;
   border-radius: 50%;
@@ -368,4 +377,79 @@ footer img {
   -ms-grid-row: 4;
   grid-row-start: 4;
   grid-row-end: 5;
+}
+
+@media screen and (min-width: 400px) {
+  .flexcontainer {
+    max-width: none;
+    align-items: center;
+  }
+  .containter {
+    width: 400px;
+  }
+
+  header {
+    max-width: 2000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+  }
+  header .fa-arrow-left {
+    margin-left: -80px;
+  }
+
+  .footer {
+    justify-content: center;
+  }
+  footer img {
+    display: block;
+    margin: 0 auto;
+    width: 20%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .flexcontainer {
+    max-width: none;
+  }
+  .photo {
+    max-width: 850px;
+    width: 70%;
+    height: 300px;
+    margin: 0 auto;
+  }
+  header {
+    max-width: 2000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+  }
+  header .fa-arrow-left {
+    margin-left: -100px;
+  }
+  .containter {
+    width: 850px;
+    margin: 0 auto;
+  }
+  .assiette {
+    width: 400px;
+    margin: 10px auto;
+  }
+  .titreSec {
+    margin-left: 100px;
+  }
+  footer .footer {
+    margin-left: 0px;
+  }
+  .footer {
+    justify-content: center;
+    width: 850px;
+  }
+  footer img {
+    display: block;
+    margin: 0 auto;
+    width: 20%;
+  }
 }
